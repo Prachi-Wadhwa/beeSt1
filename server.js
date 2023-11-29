@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 
+app.use(express.json());
+app.use("/books", router);
+
 mongoose
   .connect(
     "mongodb+srv://prachiWadhwa:Prachi2003@cluster0.m2pqlrx.mongodb.net/?retryWrites=true&w=majority"
